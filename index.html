@@ -1,154 +1,417 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Fullscreen Pageflip Layout with BookBlock</title>
-		<meta name="description" content="Fullscreen Pageflip Layout with BookBlock" />
-		<meta name="keywords" content="fullscreen pageflip, booklet, layout, bookblock, jquery plugin, flipboard layout, sidebar menu" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico"> 
-		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
-		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
-		<link rel="stylesheet" type="text/css" href="css/custom.css" />
-		<script src="js/modernizr.custom.79639.js"></script>
-	</head>
-	<body>
-		<div id="container" class="container">	
+<html lang="en">
 
-			<div class="menu-panel">
-				<h3>Pages of Menu</h3>
-				<ul id="menu-toc" class="menu-toc">
-					<li class="menu-toc-current"><a href="#item1">Front Page</a></li>
-					<li><a href="#item2">Soup Page</a></li>
-					<li><a href="#item3">Starters Page 1</a></li>
-					<li><a href="#item4">Starters Page 2</a></li>
-					<li><a href="#item5">Tandoori Page</a></li>
-					<li><a href="#item6">Biryani Page</a></li>
-					<li><a href="#item7">Bucket Biryani Page</a></li>
-					<li><a href="#item8">Roti & Naan Page</a></li>
-					<li><a href="#item9">Gravy Page</a></li>
-					<li><a href="#item10">Rice & Noodles Page</a></li>
-					<li><a href="#item11">Combo Page</a></li>
-					<li><a href="#item12">Back Page</a></li>
-				</ul>
-				<!-- <div>
-					<a href="http://tympanus.net/Development/AudioPlayer/">&larr; Previous Demo: Responsive Audio Player</a>
-					<a href="http://tympanus.net/codrops/?p=12795">Back to the Codrops Article</a>
-				</div> -->
-			</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://db.onlinewebfonts.com/c/c8c14c33f435de83845889c410ef0cc4?family=ToledoSerial-Xbold-Regular"
+        rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/8bcf131c7544a8c769042de953d799d4?family=Mangan+W03+Bold"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-			<div class="bb-custom-wrapper">
-				<div id="bb-bookblock" class="bb-bookblock">
-					<div class="bb-item" id="item1">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P1-Front-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item2">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P2-Soup-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item3">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P3-Starters-Page.webp" alt="">			
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item4">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P4-Starters-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item5">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P5-Tandoori-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item6">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P6-Biryani-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item7">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P7-Bucket-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item8">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P8-Roti&Naan-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item9">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P9-Gravy-Page.webp" alt="">			
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item10">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P10-FridedRice-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item11">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P11-Combo-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item12">
-						<div class="content">
-							<div class="scroller">
-								<img src="img/P12-Back-Page.webp" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<nav>
-					<span id="bb-nav-prev">&larr;</span>
-					<span id="bb-nav-next">&rarr;</span>
-				</nav>
+<body>
 
-				<span id="tblcontents" class="menu-button">Table of Contents</span>
+    <!-- Header -->
+    <div class="header">
+        <div class="container-fluid bg-secondary text-white py-2">
+            <div class="row align-items-center">
+                <div class="col text-start email">
+                    <a href="mailto:hyders.omr@gmail.com"
+                        class="text-white text-decoration-none">hyders.omr@gmail.com</a>
+                </div>
+                <div class="col text-end phone">
+                    <a href="tel:+918148149339" class="text-white text-decoration-none">+91 814 814 9339</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			</div>
-				
-		</div><!-- /container -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script src="js/jquery.mousewheel.js"></script>
-		<script src="js/jquery.jscrollpane.min.js"></script>
-		<script src="js/jquerypp.custom.js"></script>
-		<script src="js/jquery.bookblock.js"></script>
-		<script src="js/page.js"></script>
-		<script>
-			$(function() {
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo2.png" alt="Our-Logo" width="250" class="logo">
+            </a>
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-				Page.init();
+    <!-- Intro -->
+    <div class="intro container-fluid py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 introtext">
+                <h1>WELCOME TO <span class="highlight">HYDERS BIRYANI</span></h1>
+                <p>Welcome to <span class="highlight">Hyders Biryani</span>, your ultimate destination for authentic and
+                    mouth-watering South Indian cuisine.
+                    Located in the heart of Navalur, we pride ourselves on serving the finest biryanis, rich in
+                    tradition and flavor,
+                    alongside a diverse menu of soups, starters, and special dishes crafted to perfection. Whether
+                    you're craving a hearty
+                    mutton biryani, a spicy chicken starter, or a flavorful vegetarian option, our dishes are prepared
+                    with the freshest
+                    ingredients and a passion for excellence. Join us for a culinary experience that celebrates the true
+                    essence of South Indian flavors in a warm and welcoming atmosphere.
+                </p>
+            </div>
+            <div class="col-md-6 introimage">
+                <img src="img/81bz+pmpaSL-Photoroom-topaz-enhance-3x.png" alt="Hyders Biryani">
+            </div>
+        </div>
+    </div>
 
-			});
-		</script>
-	</body>
+
+    <!-- About Us -->
+    <div class="about container-fluid py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 abouttext">
+                <h1>About <span class="highlight">Us</span></h1>
+                <p>
+                    At <span class="highlight">Hyders Biryani</span>, we believe that food is more than just a meal—it's
+                    an experience.
+                    Founded with a passion for authentic South Indian cuisine, our restaurant in Navalur is dedicated to
+                    bringing the rich, traditional
+                    flavors of the region to your table. Every dish we serve is a testament to our commitment to
+                    quality, crafted with
+                    the finest ingredients and a deep respect for culinary heritage.
+                </p>
+                <p>
+                    From our signature biryanis, infused with aromatic spices and cooked to perfection, to our wide
+                    array of soups,
+                    starters, and main courses, we aim to offer something special for every palate. Whether you're a fan
+                    of the spicy
+                    kick of our Chicken 65 or the comforting warmth of our mutton dishes, our menu is designed to
+                    satisfy and delight.
+                </p>
+                <p>
+                    But <span class="highlight">Hyders Biryani</span> is more than just great food. It's about creating
+                    a space where families
+                    and friends can come together to share a meal, celebrate moments, and make memories. Our warm and
+                    welcoming atmosphere is a
+                    reflection of our values—hospitality, integrity, and a love for good food.
+                </p>
+                <p>
+                    Join us at <span class="highlight">Hyders Biryani</span> and experience the taste of South India,
+                    served with a side of warmth and tradition.
+                </p>
+            </div>
+            <div class="col-md-6 aboutimage">
+                <div class="img-container">
+                    <img src="img/about.jpeg" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Services -->
+    <div class="services container-fluid py-5">
+        <div class="text-center mb-5">
+            <h1>Our <span class="highlight">Services</span></h1>
+            <p>At <span class="highlight">Hyders Biryani</span>, we offer a range of tailored services to enhance your
+                dining experience:</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <i class="fa fa-utensils"></i>
+                    </div>
+                    <h3>Dine-In Experience</h3>
+                    <p>Enjoy our cozy and welcoming atmosphere as you savor our carefully crafted dishes. Perfect for
+                        casual meals or special occasions.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <i class="fa fa-box"></i>
+                    </div>
+                    <h3>Takeaway</h3>
+                    <p>Craving our food but short on time? Our takeaway service lets you enjoy your favorite dishes at
+                        home. Place your order and pick it up easily.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                    <h3>Online Ordering</h3>
+                    <p>Order online and skip the wait! Browse our menu and have your favorite dishes delivered straight
+                        to your door through our website or delivery partners.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <i class="fa fa-catering"></i>
+                    </div>
+                    <h3>Catering</h3>
+                    <p>Hosting an event? Let us cater to your gathering with a variety of dishes that will impress your
+                        guests. Customizable menus for any occasion.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <i class="fa fa-calendar-alt"></i>
+                    </div>
+                    <h3>Special Menus</h3>
+                    <p>Discover curated menus for festive occasions and seasonal specials. Check our website and social
+                        media for updates and promotions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Menu -->
+    <div class="menu container-fluid py-5">
+        <div class="text-center mb-5">
+            <h1>Our <span class="highlight">Menu</span></h1>
+            <p>At <span class="highlight">Hyders Biryani</span>, we offer a diverse menu that celebrates the rich
+                flavors of South Indian cuisine. Explore our delicious offerings below.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Repeat this block for each menu item -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P1-Front-Page.webp" alt="Dish 1" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other dishes -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P2-Soup-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards as needed, up to 12 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P3-Starters-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P4-Starters-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P5-Tandoori-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P6-Biryani-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P7-Bucket-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P8-Roti&Naan-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P9-Gravy-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P10-FridedRice-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P11-Combo-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="menu-card">
+                    <img src="img/P12-Back-Page.webp" alt="Dish 2" class="img-fluid">
+                    <div class="menu-card-body">
+                        <h3>Dish Name</h3>
+                        <p>Description of the dish that highlights its unique aspects and flavors.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-5">
+            <p>Explore the full menu to discover more delicious dishes, each prepared with the freshest ingredients and
+                a passion for authentic South Indian flavors. Whether you're dining in, ordering takeaway, or catering
+                an event, Hyders Biryani offers a menu that will satisfy your cravings and elevate your dining
+                experience.</p>
+        </div>
+    </div>
+
+
+
+<!-- Contact Us -->
+<div class="contact container-fluid py-5">
+    <div class="row">
+        <div class="col-md-6 contact-info">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Whether you have a question, need assistance, or want to make a reservation, our team at Hyders Biryani is here to help.</p>
+            <div class="contact-details">
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Hyders Biryani<br>Opp to Marina Mall<br>OMR, Navalur, Chennai, TN, 603103.</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 814 814 9339</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hyders.omr@gmail.com</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>Monday to Sunday: 11:00 AM – 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-share-alt"></i>
+                    <div>
+                        <h4>Follow Us</h4>
+                        <p>Facebook: [Your Facebook Page]<br>Instagram: [Your Instagram Handle]<br>Twitter: [Your Twitter Handle]</p>
+                    </div>
+                </div>
+            </div>
+            <p>Feel free to reach out to us through any of the contact methods listed above. We look forward to serving you and ensuring you have a memorable dining experience at Hyders Biryani.</p>
+        </div>
+        <div class="col-md-6">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.6139346455626!2d-77.03750048472192!3d38.89767627956535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7e2a0284d47%3A0x7e4f08aa4d9f9c66!2s1600%20Pennsylvania%20Ave%20NW%2C%20Washington%2C%20DC%2020500%2C%20USA!5e0!3m2!1sen!2sin!4v1635233096878!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container text-center">
+        <p class="footer-copyright">
+            &copy; 2024 Hyders Biryani. All rights reserved.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap JS and dependencies (needed for responsive toggling) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybBogGzLOE6C9eENP3Mp4cA+jr0P/sQo2wF7hMcp8V0BvY9Z5"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9lbJHuk2AKnnnLMwG7A2e6d/F0Q1pCjhVzWFOJUtvdA4M0y12QzUkHn"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
