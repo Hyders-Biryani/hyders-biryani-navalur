@@ -8,7 +8,7 @@
 
 /* General Styling */
 body {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
+    font-family: "Mangan W03 Bold", sans-serif;
     background-color: var(--light-color);
     color: var(--dark-color);
     margin: 0;
@@ -47,6 +47,19 @@ body {
 .navbar-brand:hover .logo {
     transform: scale(1.1);
 }
+
+
+/* Adjust the offset based on your navbar's height */
+#Intro, #About, #OurServices, #Menu, #Contact {
+    padding-top: 100px; /* Adjust this value according to the navbar height */
+}
+@media (max-width: 768px) {
+    #Intro, #About, #OurServices, #Menu, #Contact {
+        padding-top: 10px; /* Adjust this value according to the navbar height */
+    }
+    
+}
+
 
 /* Responsive Styling */
 @media (max-width: 768px) {
@@ -94,7 +107,7 @@ body {
 .intro {
     background: linear-gradient(135deg, rgba(254, 204, 62, 0.2), rgba(35, 31, 32, 0.2)), url('img/intro-background.jpg') no-repeat center center;
     background-size: cover;
-    padding: 5rem 0;
+    padding: 10rem 0;
     color: var(--light-color);
     position: relative;
     overflow: hidden;
@@ -158,18 +171,20 @@ body {
 }
 
 .introtext p {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
+    font-family: "Mangan W03 Bold", sans-serif;
     color: var(--light-color);
     font-size: 1.2rem;
     line-height: 1.8;
     position: relative;
+    text-align: justify;
+    text-indent: 50px;
 }
 
 .introimage img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     border-radius: 1rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
@@ -224,7 +239,7 @@ body {
 }
 
 .abouttext {
-    padding: 2rem;
+    padding: 10rem;
     text-align: left;
     position: relative;
     z-index: 2;
@@ -233,6 +248,7 @@ body {
 .abouttext h1 {
     font-family: "Mangan W03 Bold", sans-serif;
     color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 3rem;
     margin-bottom: 1rem;
     position: relative;
@@ -266,12 +282,14 @@ body {
 }
 
 .abouttext p {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
+    font-family: "Mangan W03 Bold", sans-serif;
     color: var(--light-color);
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     position: relative;
+    text-align: justify;
+    text-indent: 50px;
 }
 
 .aboutimage .img-container {
@@ -319,7 +337,7 @@ body {
 .services {
     background: url('img/services-background.jpg') no-repeat center center;
     background-size: cover;
-    padding: 5rem 0;
+    padding: 10rem 0;
     color: #fff;
     position: relative;
     text-align: center;
@@ -344,6 +362,7 @@ body {
 .services h1 {
     font-family: "Mangan W03 Bold", sans-serif;
     color: #fecc3e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 3rem;
     margin-bottom: 1rem;
     position: relative;
@@ -376,7 +395,7 @@ body {
 }
 
 .services p {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
+    font-family: "Mangan W03 Bold", sans-serif;
     color: #fff;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -436,7 +455,7 @@ body {
 }
 
 .service-card p {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
+    font-family: "Mangan W03 Bold", sans-serif;
     color: #fff;
     font-size: 1rem;
     line-height: 1.6;
@@ -475,7 +494,7 @@ body {
 .menu {
     background: url('img/menu-background.jpg') no-repeat center center;
     background-size: cover;
-    padding: 5rem 0;
+    padding: 10rem 0;
     color: #fff;
     position: relative;
     text-align: center;
@@ -500,6 +519,7 @@ body {
 .menu h1 {
     font-family: "Mangan W03 Bold", sans-serif;
     color: #fecc3e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 3rem;
     margin-bottom: 1rem;
     position: relative;
@@ -532,51 +552,68 @@ body {
 }
 
 .menu p {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
+    font-family: "Mangan W03 Bold", sans-serif;
     color: #fff;
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 2rem;
 }
 
-.menu-card {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 1rem;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+.menu-slider {
     position: relative;
-    transition: transform 0.3s ease-in-out;
-    height: 100%; /* Ensures all cards are the same height */
+    width: 23%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.menu-card:hover {
-    transform: translateY(-10px);
-    background-color: rgba(0, 0, 0, 0.8);
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.menu-card img {
+.menu-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.menu-slide img {
     width: 100%;
     height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 10px rgba(0, 0, 0, 0.3);
 }
 
-.menu-card-body {
-    padding: 1.5rem;
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    text-align: center;
-}
-
-.menu-card h3 {
-    font-family: "Mangan W03 Bold", sans-serif;
-    color: #fecc3e;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    z-index: 2;
+    transition: background 0.3s ease;
 }
 
-.menu-card p {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.6;
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Responsive Design */
@@ -588,106 +625,159 @@ body {
     .menu p {
         font-size: 1rem;
     }
-
-    .menu-card h3 {
-        font-size: 1.2rem;
+    .menu-slider {
+        width: 100%;
     }
-
-    .menu-card p {
-        font-size: 0.9rem;
+    .menu-slide {
+        flex: 0 0 100%; /* Full width for smaller screens */
     }
 }
+
+
+
+
 
 
 
 /* Contact Us Section Styling */
 .contact {
-    background: #f8f9fa;
-    color: #231f20;
+    background: linear-gradient(135deg, #f8f9fa 50%, #e9ecef 50%);
+    color: #333;
     padding: 5rem 0;
     position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 206, 86, 0.2), rgba(0, 0, 0, 0));
+    z-index: 0;
 }
 
 .contact-info {
     background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.15);
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-info:hover {
+    transform: translateY(-10px);
 }
 
 .contact-info h1 {
-    font-family: "Mangan W03 Bold", sans-serif;
-    font-size: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    color: #231f20;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.contact-info h1 .highlight {
     color: #fecc3e;
-    margin-bottom: 1rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.contact-info h1 .highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background: #fecc3e;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in-out;
+}
+
+.contact-info h1 .highlight:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .contact-info p {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #555;
 }
 
 .contact-details {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .detail-item {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.detail-item:hover {
+    transform: translateX(10px);
 }
 
 .detail-item i {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #fecc3e;
-    margin-right: 1rem;
-}
-
-.detail-item div {
-    flex: 1;
+    margin-right: 1.2rem;
 }
 
 .detail-item h4 {
-    font-family: "Mangan W03 Bold", sans-serif;
-    font-size: 1.1rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
     color: #231f20;
     margin-bottom: 0.5rem;
 }
 
 .detail-item p {
-    font-family: "ToledoSerial-Xbold-Regular", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     line-height: 1.6;
+    color: #666;
 }
 
 .map {
     height: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .contact-info {
+        padding: 2rem;
+    }
+
     .contact-info h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .contact-info p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .detail-item i {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .detail-item h4 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .detail-item p {
